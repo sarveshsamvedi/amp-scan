@@ -1,177 +1,228 @@
-<!doctype html>
-<html amp lang="en">
+<html>
 
 <head>
-   <meta charset="utf-8">
-   <script async src="https://cdn.ampproject.org/v0.js"></script>
-   <link rel="canonical" href="https://vinaypatel04.github.io/">
-   <meta name="viewport" content="width = device-width, minimum-scale = 1,initial-scale = 1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCAN Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jwplayer.com/libraries/6ZmAyaDX.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-weight: 500;
+            margin: 0;
+        }
 
-   <style amp-boilerplate>
-      body {
-         -webkit-animation:
-            -amp-start 8s steps(1, end) 0s 1 normal both;
-         -moz-animation:
-            -amp-start 8s steps(1, end) 0s 1 normal both;
-         -ms-animation:
-            -amp-start 8s steps(1, end) 0s 1 normal both;
-         animation:
-            -amp-start 8s steps(1, end) 0s 1 normal both
-      }
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
 
-      @-webkit-keyframes -amp-start {
-         from {
-            visibility: hidden
-         }
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-         to {
-            visibility: visible
-         }
-      }
+        .container {
+            background-color: #fff;
+            font-family: 'Roboto', sans-serif;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff;
+        }
 
-      @-moz-keyframes -amp-start {
-         from {
-            visibility: hidden
-         }
+        .wrapper {
+            width: 100%;
+            height: 100%;
+        }
 
-         to {
-            visibility: visible
-         }
-      }
+        .attribution {
+            background-color: #FFF;
+            border-radius: 2px;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+            font-size: 13px;
+            font-size: 3.7vw;
+            padding: 3px;
+            position: absolute;
+            z-index: 2;
+        }
 
-      @-ms-keyframes -amp-start {
-         from {
-            visibility: hidden
-         }
+        #player {
+            height: 75%;
+        }
 
-         to {
-            visibility: visible
-         }
-      }
+        .call-to-action {
+            position: absolute;
+            right: 6%;
+            bottom: 20%;
+            font-family: 'Lato', sans-serif;
+            padding: 2vw;
+            padding-right: 5vw;
+            padding-left: 5vw;
+            background-color: #fcb103;
+            border-radius: 15%;
+            box-shadow: 2px 2px 2px 2px;
+            text-align: center;
+        }
 
-      @-o-keyframes -amp-start {
-         from {
-            visibility: hidden
-         }
+        .call-to-action a {
+            font-size: 20px;
+            font-size: 6vw;
+        }
 
-         to {
-            visibility: visible
-         }
-      }
+        .logo {
+            position: relative;
+            top: 0%;
+            left: 0%;
+            width: 10%;
+            height: 10%;
+        }
 
-      @keyframes -amp-start {
-         from {
-            visibility: hidden
-         }
+        .logo img {
+            height: 20vw;
+            width: 30vw;
+        }
 
-         to {
-            visibility: visible
-         }
-      }
-   </style>
-   <noscript>
-      <style amp-boilerplate>
-         body {
-            -webkit-animation: none;
-            -moz-animation: none;
-            -ms-animation: none;
-            animation: none
-         }
-      </style>
-   </noscript>
-   <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js">
-   </script>
-   <style amp-custom>
-      div {
-         text-align: center;
-      }
+        .footer {
+            width: 100%;
+            bottom: 5%;
+            position: absolute;
+        }
 
-      body {
-         padding: 10px;
-      }
-   </style>
+        .border {
+            border-top: 1px solid #ddd;
+            width: 96%;
+            position: absolute;
+            bottom: 12%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #video {
+            border-radius: 3vw;
+            width: 100%;
+        }
+
+        .volume-control {
+            z-index: 5;
+            position: absolute;
+            left: 2%;
+            top: 58%;
+        }
+
+        #volume-on {
+            width: 20px;
+            width: 6.5vw;
+            display: none;
+        }
+
+        #volume-off {
+            width: 20px;
+            width: 6.5vw;
+        }
+
+        /* .jw-slider-time {
+            display: none !important;
+        } */
+
+        /* .jw-svg-icon-pause {
+            visibility: hidden !important;
+        }
+
+        .jw-svg-icon-replay {
+            visibility: hidden !important;
+        }
+
+        .jw-svg-icon-play {
+            visibility: hidden !important;
+
+        } */
+        .jw-display-icon-container {
+            visibility: hidden !important;
+        }
+    </style>
 </head>
 
 <body>
-   <h3>AMP</h3>
-   <span>The AMP (Accelerated Mobile Pages) Project is an open-source initiative that aims to make the web better for
-      all. The project allows for the creation of websites and ads that are consistently fast, beautiful, and
-      high-performing across devices and distribution patterns.</span><br><br><br><br>
-   <span>AMPHTML ads are a better way of building, delivering, and measuring ads that are faster, lighter, and more
-      secure. AMPHTML ads are ads built using AMPHTML and use many of the smart components that make AMP pages
-      fast</span><br><br><br><br>
+    <div class="wrapper flex-center" id="js-wrapper">
+        <div class="container" id="js-screen">
+            <div class='attribution'>Ad </div>
+            <div class='asset' id='player'>
+            </div>
+            <div class="footer" id="footer">
+                <div class='logo'>
+                    <img src="https://gamewall-pwa.sharechat.com/innovation/scan/video-ads/moj-logo.jpg">
+                </div>
+                <div class='call-to-action'>
+                    <a class='call-to-action-link'>Install</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        var playerInstance = jwplayer("player")
+        function addPlayerEvents() {
+            playerInstance.on('setupError', function () {
+                console.log("Setup error");
+            });
+            playerInstance.on('firstFrame', function (event) {
+                console.log("play");
+            });
+            playerInstance.on('complete', function () {
+                console.log("Complete");
+            });
+            playerInstance.on('mute', function (event) {
+                console.log("mute", event);
+            });
+            playerInstance.on('time', function (event) {
+                // console.log("Ad time", event);
+            });
+            playerInstance.on('adViewableImpression', function (event) {
+                console.log("Ad Viewable Impression", event);
+            });
+        }
 
-   <span>AMP HTML is a subset of HTML for authoring content pages such as news articles in a way that guarantees certain
-      baseline performance characteristics.
+        function playerSetup() {
+            playerInstance.setup({
+                file: "https://gamewall-pwa.sharechat.com/innovation/scan/video-ads/moj-video.mp4",
+                // "playlist": "https://cdn.jwplayer.com/v2/media/rNuOgQ1K",
+                allowFullscreen: false,
+                autostart: "viewable",
+                // outstream: true,
+                advertising: {
+                    client: "vast",
+                    //  outstream: true,
+                    tag: "https://pubads.g.doubleclick.net/gampad/ads?iu=%2F21872722794%2Fvideo_instream&description_url=https%3A%2F%2Fwww.sharechat.com&tfcd=0&npa=0&sz=640x480&max_ad_duration=90000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&cust_params=ad_placement%3DTRENDING_FEED%26appVersion%3D5085%26adult%3D0%26postLanguage%3DHindi%26postAuthorName%3DGhar%2520Grihasti%26postAuthorId%3D2674660744%26userGender%3DM%26userLanguage%3DHindi%26ageRange%3D18-24%26userId%3D1718371134%26genreCategory%3DLife"
+                }
+            });
+            // playerInstance.setup({
+            //     "aspectratio": "16:9",
+            //     "width": "100%",
+            //     "advertising": {
+            //         "client": "vast",
+            //         "outstream": true,
+            //         tag: "https://pubads.g.doubleclick.net/gampad/ads?iu=%2F21872722794%2Fvideo_instream&description_url=https%3A%2F%2Fwww.sharechat.com&tfcd=0&npa=0&sz=640x480&max_ad_duration=90000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&cust_params=ad_placement%3DTRENDING_FEED%26appVersion%3D5085%26adult%3D0%26postLanguage%3DHindi%26postAuthorName%3DGhar%2520Grihasti%26postAuthorId%3D2674660744%26userGender%3DM%26userLanguage%3DHindi%26ageRange%3D18-24%26userId%3D1718371134%26genreCategory%3DLife"
+            //     },
+            // });
+            playerInstance.on('ready', function () {
+                addPlayerEvents()
+            });
+        }
 
-      Being a subset of HTML, it puts some restrictions on the full set of tags and functionality available through HTML
-      but it does not require the development of new rendering engines: existing user agents can render AMP HTML just
-      like all other HTML.</span><br><br><br><br>
-
-
-   <span>Also, AMP HTML documents can be uploaded to a web server and served just like any other HTML document; no
-      special configuration for the server is necessary. However, they are also designed to be optionally served through
-      specialized AMP serving systems that proxy AMP documents. These documents serve them from their own origin and are
-      allowed to apply transformations to the document that provide additional performance benefits. An incomplete list
-      of optimizations such a serving system might do is:</span><br><br><br><br>
-
-
-   <span>AMP HTML uses a set of contributed but centrally managed and hosted custom elements to implement advanced
-      functionality such as image galleries that might be found in an AMP HTML document. While it does allow styling the
-      document using custom CSS, it does not allow author written JavaScript beyond what is provided through the custom
-      elements to reach its performance goals.
-
-      By using the AMP format, content producers are making the content in AMP files available to be crawled (subject to
-      robots.txt restrictions), cached, and displayed by third parties.</span><br><br><br><br>
-
-   <span>The AMP (Accelerated Mobile Pages) Project is an open-source initiative that aims to make the web better for
-      all. The project allows for the creation of websites and ads that are consistently fast, beautiful, and
-      high-performing across devices and distribution patterns.</span><br><br><br><br>
-   <span>AMPHTML ads are a better way of building, delivering, and measuring ads that are faster, lighter, and more
-      secure. AMPHTML ads are ads built using AMPHTML and use many of the smart components that make AMP pages
-      fast</span><br><br><br><br>
-
-
-   <span>AMP HTML is a subset of HTML for authoring content pages such as news articles in a way that guarantees certain
-      baseline performance characteristics.
-
-      Being a subset of HTML, it puts some restrictions on the full set of tags and functionality available through HTML
-      but it does not require the development of new rendering engines: existing user agents can render AMP HTML just
-      like all other HTML.</span><br><br><br><br>
-
-
-   <span>Also, AMP HTML documents can be uploaded to a web server and served just like any other HTML document; no
-      special configuration for the server is necessary. However, they are also designed to be optionally served through
-      specialized AMP serving systems that proxy AMP documents. These documents serve them from their own origin and are
-      allowed to apply transformations to the document that provide additional performance benefits. An incomplete list
-      of optimizations such a serving system might do is:</span><br><br><br><br>
-
-
-   <span>AMP HTML uses a set of contributed but centrally managed and hosted custom elements to implement advanced
-      functionality such as image galleries that might be found in an AMP HTML document. While it does allow styling the
-      document using custom CSS, it does not allow author written JavaScript beyond what is provided through the custom
-      elements to reach its performance goals.
-
-      By using the AMP format, content producers are making the content in AMP files available to be crawled (subject to
-      robots.txt restrictions), cached, and displayed by third parties.</span><br><br><br><br>
-
-   <h5>300x250 Ads</h5>
-
-   <div>
-      <amp-ad width="300" height="250" type="doubleclick" data-slot="/21872722794/scanpoc">
-         <div fallback>
-            <p style="color:red;font-size:25px;">No ads to Serve!</p>
-         </div>
-      </amp-ad>
-   </div>
-   <div>
-      <amp-ad width="300" height="250" type="doubleclick" data-slot="/21872722794/scanpoc">
-         <div fallback>
-            <p style="color:red;font-size:25px;">No ads to Serve!</p>
-         </div>
-      </amp-ad>
-   </div>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('AdRendered')
+            playerSetup();
+        });
+    </script>
 </body>
 
 </html>
