@@ -129,11 +129,11 @@
             width: 6.5vw;
         }
 
-        /* .jw-slider-time {
+        .jw-slider-time {
             display: none !important;
-        } */
+        }
 
-        /* .jw-svg-icon-pause {
+        .jw-svg-icon-pause {
             visibility: hidden !important;
         }
 
@@ -144,7 +144,7 @@
         .jw-svg-icon-play {
             visibility: hidden !important;
 
-        } */
+        }
         .jw-display-icon-container {
             visibility: hidden !important;
         }
@@ -170,6 +170,8 @@
 
     <script>
         var playerInstance = jwplayer("player")
+        var vastTagOutstream = "https://ad.doubleclick.net/ddm/pfadx/N5295.150290INVITEMEDIA127/B27352646.333897013;sz=0x0;AUCID=;ord=%5Btimestamp%5D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;dcmt=text/xml;dc_sdk_apis=%5BAPIFRAMEWORKS%5D;dc_omid_p=%5BOMIDPARTNER%5D;dc_vast=3;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;ltd="
+        
         function addPlayerEvents() {
             playerInstance.on('setupError', function () {
                 console.log("Setup error");
@@ -192,27 +194,19 @@
         }
 
         function playerSetup() {
-            playerInstance.setup({
-                file: "https://gamewall-pwa.sharechat.com/innovation/scan/video-ads/moj-video.mp4",
-                // "playlist": "https://cdn.jwplayer.com/v2/media/rNuOgQ1K",
-                allowFullscreen: false,
-                autostart: "viewable",
-                // outstream: true,
-                advertising: {
-                    client: "vast",
-                    //  outstream: true,
-                    tag: "https://pubads.g.doubleclick.net/gampad/ads?iu=%2F21872722794%2Fvideo_instream&description_url=https%3A%2F%2Fwww.sharechat.com&tfcd=0&npa=0&sz=640x480&max_ad_duration=90000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&cust_params=ad_placement%3DTRENDING_FEED%26appVersion%3D5085%26adult%3D0%26postLanguage%3DHindi%26postAuthorName%3DGhar%2520Grihasti%26postAuthorId%3D2674660744%26userGender%3DM%26userLanguage%3DHindi%26ageRange%3D18-24%26userId%3D1718371134%26genreCategory%3DLife"
-                }
-            });
             // playerInstance.setup({
-            //     "aspectratio": "16:9",
-            //     "width": "100%",
-            //     "advertising": {
-            //         "client": "vast",
-            //         "outstream": true,
-            //         tag: "https://pubads.g.doubleclick.net/gampad/ads?iu=%2F21872722794%2Fvideo_instream&description_url=https%3A%2F%2Fwww.sharechat.com&tfcd=0&npa=0&sz=640x480&max_ad_duration=90000&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&cust_params=ad_placement%3DTRENDING_FEED%26appVersion%3D5085%26adult%3D0%26postLanguage%3DHindi%26postAuthorName%3DGhar%2520Grihasti%26postAuthorId%3D2674660744%26userGender%3DM%26userLanguage%3DHindi%26ageRange%3D18-24%26userId%3D1718371134%26genreCategory%3DLife"
-            //     },
+            //     file: "https://gamewall-pwa.sharechat.com/innovation/scan/video-ads/moj-video.mp4",
+            //     // "playlist": "https://cdn.jwplayer.com/v2/media/rNuOgQ1K",
+            //     allowFullscreen: false
             // });
+            playerInstance.setup({
+                allowFullscreen: false,
+                "advertising": {
+                    "client": "vast",
+                    "outstream": true,
+                    tag: vastTagOutstream
+                },
+            });
             playerInstance.on('ready', function () {
                 addPlayerEvents()
             });
