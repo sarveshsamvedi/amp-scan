@@ -171,7 +171,7 @@
     <script>
         var playerInstance = jwplayer("player")
         var vastTagOutstream = "https://ad.doubleclick.net/ddm/pfadx/N5295.150290INVITEMEDIA127/B27352646.333897013;sz=0x0;AUCID=;ord=%5Btimestamp%5D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;dcmt=text/xml;dc_sdk_apis=%5BAPIFRAMEWORKS%5D;dc_omid_p=%5BOMIDPARTNER%5D;dc_vast=3;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;ltd="
-        
+        // var vastTagOutstream = "https://vast.doubleverify.com/v3/vast?_media=3&ctx=13256347&cmp=27536309&sid=7674563&plc=333048907&adsrv=166&blk=1&psf=1&_vast=https%253A%252F%252Fad.doubleclick.net%252Fddm%252Fpfadx%252FN1037307.3700363SHARECHAT%252FB27536309.333048907%253Bsz%253D0x0%253Bord%253D%257Bs1%257D%253Bdc_lat%253D%253Bdc_rdid%253D%253Btag_for_child_directed_treatment%253D%253Btfua%253D%253Bdcmt%253Dtext%252Fxml%253Bdc_sdk_apis%253D%257Bs2%257D%253Bdc_omid_p%253D%257Bs3%257D%253Bdc_vast%253D3%253Bgdpr%253D%2524%257BGDPR%257D%253Bgdpr_consent%253D%257Bs4%257D%253Bltd%253D&_s1=%25%25CACHEBUSTER%25%25&_s2=%5BAPIFRAMEWORKS%5D&_s3=%5BOMIDPARTNER%5D&_s4=$%7BGDPR_CONSENT_755%7D&_api=%257Bs2%257D&_ssm=%5BSERVERSIDE%5D&_tsm=%5BTIMESTAMP%5D&gdpr=$%7BGDPR%7D&gdpr_consent=$%7BGDPR_CONSENT_126%7D&_abm=%5BAPPBUNDLE%5D&_pum=%5BPAGEURL%5D"
         function addPlayerEvents() {
             playerInstance.on('setupError', function () {
                 console.log("Setup error");
@@ -200,7 +200,11 @@
             //     allowFullscreen: false
             // });
             playerInstance.setup({
-                allowFullscreen: false,
+                "allowFullscreen": false,
+                "autoPause": {
+                    "viewability": true,
+                    "pauseAds": true
+                },
                 "advertising": {
                     "client": "vast",
                     "outstream": true,
