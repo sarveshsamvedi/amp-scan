@@ -1,225 +1,160 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SCAN Template</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="https://cdn.jwplayer.com/libraries/6ZmAyaDX.js"></script>
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: sans-serif;
-            font-weight: 500;
-            margin: 0;
-        }
-
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .flex-center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            background-color: #fff;
-            font-family: 'Roboto', sans-serif;
-            flex-direction: column;
-            height: 100%;
-            width: 100%;
-            background-color: #ffffff;
-        }
-
-        .wrapper {
-            width: 100%;
-            height: 100%;
-        }
-
-        .attribution {
-            background-color: #FFF;
-            border-radius: 2px;
-            box-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
-            font-size: 13px;
-            font-size: 3.7vw;
-            padding: 3px;
-            position: absolute;
-            z-index: 2;
-        }
-
-        #player {
-            height: 75%;
-        }
-
-        .call-to-action {
-            position: absolute;
-            right: 6%;
-            bottom: 20%;
-            font-family: 'Lato', sans-serif;
-            padding: 2vw;
-            padding-right: 5vw;
-            padding-left: 5vw;
-            background-color: #fcb103;
-            border-radius: 15%;
-            box-shadow: 2px 2px 2px 2px;
-            text-align: center;
-        }
-
-        .call-to-action a {
-            font-size: 20px;
-            font-size: 6vw;
-        }
-
-        .logo {
-            position: relative;
-            top: 0%;
-            left: 0%;
-            width: 10%;
-            height: 10%;
-        }
-
-        .logo img {
-            height: 20vw;
-            width: 30vw;
-        }
-
-        .footer {
-            width: 100%;
-            bottom: 5%;
-            position: absolute;
-        }
-
-        .border {
-            border-top: 1px solid #ddd;
-            width: 96%;
-            position: absolute;
-            bottom: 12%;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        #video {
-            border-radius: 3vw;
-            width: 100%;
-        }
-
-        .volume-control {
-            z-index: 5;
-            position: absolute;
-            left: 2%;
-            top: 58%;
-        }
-
-        #volume-on {
-            width: 20px;
-            width: 6.5vw;
-            display: none;
-        }
-
-        #volume-off {
-            width: 20px;
-            width: 6.5vw;
-        }
-
-        .jw-slider-time {
-            display: none !important;
-        }
-
-        .jw-svg-icon-pause {
-            visibility: hidden !important;
-        }
-
-        .jw-svg-icon-replay {
-            visibility: hidden !important;
-        }
-
-        .jw-svg-icon-play {
-            visibility: hidden !important;
-
-        }
-        .jw-display-icon-container {
-            visibility: hidden !important;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
-    <div class="wrapper flex-center" id="js-wrapper">
-        <div class="container" id="js-screen">
-            <div class='attribution'>Ad </div>
-            <div class='asset' id='player'>
-            </div>
-            <div class="footer" id="footer">
-                <div class='logo'>
-                    <img src="https://gamewall-pwa.sharechat.com/innovation/scan/video-ads/moj-logo.jpg">
-                </div>
-                <div class='call-to-action'>
-                    <a class='call-to-action-link'>Install</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h3>Sample Website - Scan Video Ads POC</h3>
+    <br><br>
+    <br>
+    <span>Get apps to market faster
+        We’ll handle the infrastructure, app runtimes and dependencies, so that you can push code to production in just
+        a few clicks.
 
-    <script>
-        var playerInstance = jwplayer("player")
-        var vastTagOutstream = "https://ad.doubleclick.net/ddm/pfadx/N5295.150290INVITEMEDIA127/B27352646.333897013;sz=0x0;AUCID=;ord=%5Btimestamp%5D;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;dcmt=text/xml;dc_sdk_apis=%5BAPIFRAMEWORKS%5D;dc_omid_p=%5BOMIDPARTNER%5D;dc_vast=3;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;ltd="
-        // var vastTagOutstream = "https://vast.doubleverify.com/v3/vast?_media=3&ctx=13256347&cmp=27536309&sid=7674563&plc=333048907&adsrv=166&blk=1&psf=1&_vast=https%253A%252F%252Fad.doubleclick.net%252Fddm%252Fpfadx%252FN1037307.3700363SHARECHAT%252FB27536309.333048907%253Bsz%253D0x0%253Bord%253D%257Bs1%257D%253Bdc_lat%253D%253Bdc_rdid%253D%253Btag_for_child_directed_treatment%253D%253Btfua%253D%253Bdcmt%253Dtext%252Fxml%253Bdc_sdk_apis%253D%257Bs2%257D%253Bdc_omid_p%253D%257Bs3%257D%253Bdc_vast%253D3%253Bgdpr%253D%2524%257BGDPR%257D%253Bgdpr_consent%253D%257Bs4%257D%253Bltd%253D&_s1=%25%25CACHEBUSTER%25%25&_s2=%5BAPIFRAMEWORKS%5D&_s3=%5BOMIDPARTNER%5D&_s4=$%7BGDPR_CONSENT_755%7D&_api=%257Bs2%257D&_ssm=%5BSERVERSIDE%5D&_tsm=%5BTIMESTAMP%5D&gdpr=$%7BGDPR%7D&gdpr_consent=$%7BGDPR_CONSENT_126%7D&_abm=%5BAPPBUNDLE%5D&_pum=%5BPAGEURL%5D"
-        function addPlayerEvents() {
-            playerInstance.on('setupError', function () {
-                console.log("Setup error");
-            });
-            playerInstance.on('firstFrame', function (event) {
-                console.log("play");
-            });
-            playerInstance.on('complete', function () {
-                console.log("Complete");
-            });
-            playerInstance.on('mute', function (event) {
-                console.log("mute", event);
-            });
-            playerInstance.on('time', function (event) {
-                // console.log("Ad time", event);
-            });
-            playerInstance.on('adViewableImpression', function (event) {
-                console.log("Ad Viewable Impression", event);
-            });
-        }
+        Build, deploy, manage, and scale apps
+        Support for Node.js, Python, Go, PHP, Ruby, Static sites, Docker
+        Zero infrastructure management
+        Highly scalable</span><br><br><br><br>
+    <span>Get apps to market faster
+        We’ll handle the infrastructure, app runtimes and dependencies, so that you can push code to production in just
+        a few clicks.
 
-        function playerSetup() {
-            // playerInstance.setup({
-            //     file: "https://gamewall-pwa.sharechat.com/innovation/scan/video-ads/moj-video.mp4",
-            //     // "playlist": "https://cdn.jwplayer.com/v2/media/rNuOgQ1K",
-            //     allowFullscreen: false
-            // });
-            playerInstance.setup({
-                "allowFullscreen": false,
-                "autoPause": {
-                    "viewability": true,
-                    "pauseAds": true
-                },
-                "advertising": {
-                    "client": "vast",
-                    "outstream": true,
-                    tag: vastTagOutstream
-                },
-            });
-            playerInstance.on('ready', function () {
-                addPlayerEvents()
-            });
-        }
+        Build, deploy, manage, and scale apps
+        Support for Node.js, Python, Go, PHP, Ruby, Static sites, Docker
+        Zero infrastructure management
+        Highly scalable</span><br><br><br><br>
+    <span>Get apps to market faster
+        We’ll handle the infrastructure, app runtimes and dependencies, so that you can push code to production in just
+        a few clicks.
 
-        document.addEventListener('DOMContentLoaded', function () {
-            console.log('AdRendered')
-            playerSetup();
-        });
+        Build, deploy, manage, and scale apps
+        Support for Node.js, Python, Go, PHP, Ruby, Static sites, Docker
+        Zero infrastructure management
+        Highly scalable</span><br><br><br><br>
+    <span>Get apps to market faster
+        We’ll handle the infrastructure, app runtimes and dependencies, so that you can push code to production in just
+        a few clicks.
+
+        Build, deploy, manage, and scale apps
+        Support for Node.js, Python, Go, PHP, Ruby, Static sites, Docker
+        Zero infrastructure management
+        Highly scalable</span><br><br><br><br>
+    <span>Get apps to market faster
+        We’ll handle the infrastructure, app runtimes and dependencies, so that you can push code to production in just
+        a few clicks.
+
+        Build, deploy, manage, and scale apps
+        Support for Node.js, Python, Go, PHP, Ruby, Static sites, Docker
+        Zero infrastructure management
+        Highly scalable</span><br><br><br><br>
+
+    <span>Fully managed solution
+        Use a simple, intuitive, and visually rich experience to rapidly build, deploy, manage, and scale apps.
+
+        Secure apps automatically. We create, manage and renew your SSL certificates and also protect your apps from
+        DDoS attacks.
+
+        Focus on what matters the most: building awesome apps. Let us handle provisioning and managing infrastructure,
+        operating systems, databases, application runtimes, and other dependencies.</span><br><br>
+    <span>Fully managed solution
+        Use a simple, intuitive, and visually rich experience to rapidly build, deploy, manage, and scale apps.
+
+        Secure apps automatically. We create, manage and renew your SSL certificates and also protect your apps from
+        DDoS attacks.
+
+        Focus on what matters the most: building awesome apps. Let us handle provisioning and managing infrastructure,
+        operating systems, databases, application runtimes, and other dependencies.</span><br><br>
+    <span>Fully managed solution
+        Use a simple, intuitive, and visually rich experience to rapidly build, deploy, manage, and scale apps.
+
+        Secure apps automatically. We create, manage and renew your SSL certificates and also protect your apps from
+        DDoS attacks.
+
+        Focus on what matters the most: building awesome apps. Let us handle provisioning and managing infrastructure,
+        operating systems, databases, application runtimes, and other dependencies.</span><br><br>
+    <span>Fully managed solution
+        Use a simple, intuitive, and visually rich experience to rapidly build, deploy, manage, and scale apps.
+
+        Secure apps automatically. We create, manage and renew your SSL certificates and also protect your apps from
+        DDoS attacks.
+
+        Focus on what matters the most: building awesome apps. Let us handle provisioning and managing infrastructure,
+        operating systems, databases, application runtimes, and other dependencies.</span><br><br>
+    <span>Fully managed solution
+        Use a simple, intuitive, and visually rich experience to rapidly build, deploy, manage, and scale apps.
+
+        Secure apps automatically. We create, manage and renew your SSL certificates and also protect your apps from
+        DDoS attacks.
+
+        Focus on what matters the most: building awesome apps. Let us handle provisioning and managing infrastructure,
+        operating systems, databases, application runtimes, and other dependencies.</span><br><br>
+    <span>Fully managed solution
+        Use a simple, intuitive, and visually rich experience to rapidly build, deploy, manage, and scale apps.
+
+        Secure apps automatically. We create, manage and renew your SSL certificates and also protect your apps from
+        DDoS attacks.
+
+        Focus on what matters the most: building awesome apps. Let us handle provisioning and managing infrastructure,
+        operating systems, databases, application runtimes, and other dependencies.</span><br><br>
+    <span>Fully managed solution
+        Use a simple, intuitive, and visually rich experience to rapidly build, deploy, manage, and scale apps.
+
+        Secure apps automatically. We create, manage and renew your SSL certificates and also protect your apps from
+        DDoS attacks.
+
+        Focus on what matters the most: building awesome apps. Let us handle provisioning and managing infrastructure,
+        operating systems, databases, application runtimes, and other dependencies.</span><br><br>
+    <span>Fully managed solution
+        Use a simple, intuitive, and visually rich experience to rapidly build, deploy, manage, and scale apps.
+
+        Secure apps automatically. We create, manage and renew your SSL certificates and also protect your apps from
+        DDoS attacks.
+
+        Focus on what matters the most: building awesome apps. Let us handle provisioning and managing infrastructure,
+        operating systems, databases, application runtimes, and other dependencies.</span><br><br>
+    <span>Fully managed solution
+        Use a simple, intuitive, and visually rich experience to rapidly build, deploy, manage, and scale apps.
+
+        Secure apps automatically. We create, manage and renew your SSL certificates and also protect your apps from
+        DDoS attacks.
+
+        Focus on what matters the most: building awesome apps. Let us handle provisioning and managing infrastructure,
+        operating systems, databases, application runtimes, and other dependencies.</span><br><br>
+    <span>Fully managed solution
+        Use a simple, intuitive, and visually rich experience to rapidly build, deploy, manage, and scale apps.
+
+        Secure apps automatically. We create, manage and renew your SSL certificates and also protect your apps from
+        DDoS attacks.
+
+        Focus on what matters the most: building awesome apps. Let us handle provisioning and managing infrastructure,
+        operating systems, databases, application runtimes, and other dependencies.</span><br><br>
+
+
+    <br><br><span>Secure apps automatically. We create, manage and renew your SSL certificates and also protect your
+        apps from
+        DDoS attacks.</span>
+    <span>automatically. We create, manage and renew your SSL certificates and also protect your apps from
+        DDoS attacks.</span><br><br>
+
+    <br><br><span>Fully managed solution
+        Use a simple, intuitive, and visually rich experience to rapidly build,</span>
+    <span>automatically. We create, manage and renew your SSL certificates and also protect your apps from
+        DDoS attacks.</span><br><br>
+
+    <br />
+
+    <h1>JW Player Video Ads</h1>
+
+    <iframe src="https://gamewall-pwa.sharechat.com/innovation/scan-poc/jw-video-poc.html" width="300"
+        height="250"></iframe>
+
+
+    <script type="text/javascript">
     </script>
 </body>
 
